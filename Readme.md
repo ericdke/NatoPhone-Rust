@@ -1,0 +1,1 @@
+A tiny version of [NatoPhone CLI](https://github.com/ericdke/NATOPhone) in Rust (learning exercise).

@@ -1,0 +1,6 @@
+[package]
+name = "nato"
+version = "0.1.0"
+authors = ["Eric Dejonckheere <eric@aya.io>"]
+
+[dependencies]
