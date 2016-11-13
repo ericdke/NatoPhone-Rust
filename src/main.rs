@@ -33,12 +33,10 @@ fn main() {
         .and_then(|d| d.decode())
         .unwrap_or_else(|e| e.exit());
 
-    if args.cmd_encode {
-        if let Some(words) = args.arg_text {
+    if let Some(words) = args.arg_text {
+        if args.cmd_encode {
             println!("{}", encode::translated(words, args.flag_yell))
-        }
-    } else if args.cmd_decode {
-        if let Some(words) = args.arg_text {
+        } else if args.cmd_decode {
             println!("{}", decode::translated(words, args.flag_yell))
         }
     }
