@@ -1,7 +1,8 @@
 use std::collections::HashMap;
 
-pub fn translated(words: Vec<String>) -> String {
-    translate(words).join("")
+pub fn translated(words: Vec<String>, yell: bool) -> String {
+    let st = translate(words).join("");
+    if yell { st.to_uppercase() } else { st }
 }
 
 fn translate(words: Vec<String>) -> Vec<String> {

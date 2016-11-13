@@ -1,7 +1,8 @@
 use std::collections::HashMap;
 
-pub fn translated(words: Vec<String>) -> String {
-    translate(words).join("")
+pub fn translated(words: Vec<String>, yell: bool) -> String {
+    let st = translate(words).join("");
+    if yell { st.to_uppercase() } else { st }
 }
 
 fn translate(words: Vec<String>) -> Vec<String> {
@@ -59,7 +60,7 @@ fn translate(words: Vec<String>) -> Vec<String> {
                 continue;
             }
             let nat = match dic.get(c) {
-                Some(w) => w.to_string().to_uppercase(),
+                Some(w) => w.to_string(),
                 None => "".to_string(),
             };
             if nat != "" {
